@@ -1,21 +1,81 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
 
-@layer components {
-    .inventory-item {
-        @apply w-16 h-16 text-zinc-50 bg-zinc-700 bg-opacity-60 z-20;
-    }
+img {
+    display: block;
+}
 
-    .selected-item {
-        @apply border-2;
-    }
+body {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
 
-    .item-preview {
-        @apply fixed top-0 left-0 w-full h-full flex justify-center items-center pointer-events-none bg-zinc-900 bg-opacity-70;
-    }
+.game-canvas {
+    width: 100%;
+    height: 100vh;
+}
 
-    .item-preview img {
-        @apply h-3/4;
-    }
+.ui-container {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.exit-view-button {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: red;
+    opacity: 0.8;
+    font-size: large;
+}
+
+.inventory {
+    height: 4rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    gap: 1rem;
+    margin: 0 auto 2rem auto;
+    align-self: flex-end;
+}
+
+.inventory-item {
+    width: 4rem;
+    height: 4rem; 
+    color: #fafafa;
+    background-color: #30303080;
+    z-index: 20;
+}
+
+.selected-item {
+    border: solid 2px currentColor;
+}
+
+.item-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    background-color: #202020a0;
+}
+
+.item-preview img {
+    height: 75%;
+}
+
+.hidden {
+    display: none;
 }

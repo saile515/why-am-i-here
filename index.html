@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="./key.webp" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="src/index.css" />
-    <title>Why Am I Here?</title>
-  </head>
-  <body>
-    <canvas id="game_canvas" class="w-full h-screen"></canvas>
-    <div class="z-10 fixed w-full h-full top-0 left-0 flex">
-        <button id="exit_view" class="hidden p-4 m-4 bg-red-400 opacity-80 text-lg">Exit</button>
-        <div class="h-16 grid grid-flow-col auto-cols-auto gap-4 mx-auto mb-8 self-end" id="inventory"></div>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/webp" href="./key.webp" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="src/index.css" />
+        <title>Why Am I Here?</title>
+    </head>
+    <body>
+        <canvas id="game_canvas" class="game-canvas"></canvas>
+        <div class="ui-container">
+            <button id="exit_view" class="exit-view-button hidden">Exit</button>
+            <div class="inventory" id="inventory"></div>
+        </div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
 </html>
